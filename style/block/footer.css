@@ -1,0 +1,18 @@
+footer{
+    padding: 56px 0;
+    background-color: #fff;
+}
+
+.footer__subtitle{
+    font-size: 13px;
+    line-height: 16px;
+    color: #21201f;
+    max-width: 600px;
+    font-weight: 600;
+}
+
+@media (max-width: 919px){
+    footer .container{
+        flex-direction: column;
+    }
+}

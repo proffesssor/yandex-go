@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Самокаты — Яндекс Go</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/base.css">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/font/style.css">
+    <link rel="stylesheet" href="./style/block/header.css">
+    <link rel="stylesheet" href="./style/block/main.css">
+    <link rel="stylesheet" href="./style/block/title.css">
+    <link rel="stylesheet" href="./style/block/how.css">
+    <link rel="stylesheet" href="./style/block/packs.css">
+    <link rel="stylesheet" href="./style/block/plus.css">
+    <link rel="stylesheet" href="./style/block/carusel.css">
+    <link rel="stylesheet" href="./style/block/info.css">
+    <link rel="stylesheet" href="./style/block/map.css">
+    <link rel="stylesheet" href="./style/block/download.css">
+    <link rel="stylesheet" href="./style/block/footer.css">
+    <link rel="shortcut icon" href="https://avatars.mds.yandex.net/get-lpc/403342/fd202ec2-2eab-4f67-939e-1ffc0afa13fc/orig">
+</head>
+<body>
+    <header id="header">
+        <div class="header__wrapper">
+            <div class="header__logo">
+                <svg width="158" height="45" viewBox="0 0 177 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M139.196 0.892578H158.659C163.306 0.893061 167.762 2.73398 171.048 6.01045C174.334 9.28692 176.18 13.7306 176.181 18.3643V33.4227C176.181 35.717 175.728 37.9889 174.847 40.1086C173.967 42.2282 172.676 44.1542 171.049 45.7764C169.422 47.3987 167.49 48.6854 165.364 49.5633C163.238 50.4411 160.96 50.8928 158.659 50.8926H139.397C137.096 50.8928 134.818 50.4411 132.692 49.5633C130.566 48.6854 128.634 47.3987 127.007 45.7764C125.38 44.1542 124.089 42.2282 123.209 40.1086C122.328 37.9889 121.875 35.717 121.875 33.4227V18.3643C121.875 8.71322 129.517 0.892578 139.196 0.892578Z" fill="#21201F"/>
+                    <path d="M143.959 29.1624V28.3137H138.833V24.5364H148.827V29.0295C148.827 36.1016 145.44 40.2104 139.034 40.2104C132.428 40.2104 128.591 35.0197 128.591 25.8677C128.591 16.9434 132.778 11.4795 140.46 11.4795C143.362 11.4795 145.865 12.2463 147.233 13.2443V17.1328C145.268 15.9186 143.005 15.2676 140.694 15.2514C135.656 15.2514 133.52 18.6627 133.52 25.8677C133.52 32.856 135.289 36.4312 139.125 36.4312C142.79 36.4494 143.959 33.621 143.959 29.1624Z" fill="white"/>
+                    <path d="M169.552 29.6943C169.552 36.484 165.881 40.2268 160.604 40.2268C155.327 40.2268 151.657 36.484 151.657 29.7453C151.657 22.9555 155.327 19.2127 160.604 19.2127C165.881 19.2127 169.552 22.9391 169.552 29.6943ZM164.596 29.6943C164.596 25.0354 163.261 22.9901 160.61 22.9901C157.959 22.9901 156.622 25.0354 156.622 29.7453C156.622 34.4041 157.957 36.4513 160.61 36.4513C163.263 36.4513 164.596 34.3877 164.596 29.6943Z" fill="white"/>
+                    <path d="M13.9269 15.6695H11.7357C7.75507 15.6695 5.65884 17.682 5.65884 20.6598C5.65884 24.0383 7.10867 25.6028 10.096 27.6153L12.5483 29.2636L5.45799 39.8271H0.180908L6.53714 30.3764C2.86692 27.7647 0.814523 25.2367 0.814523 20.9275C0.814523 15.5365 4.56326 11.8921 11.6846 11.8921H18.773V39.8289H13.9104V15.6695H13.9269ZM38.8168 19.6126V39.8289H34.0291V31.3927H27.6217V39.8289H22.834V19.6126H27.6217V27.6153H34.0291V19.6126H38.8168ZM60.4528 44.4386H56.0157V39.8125H45.2552V44.4386H40.8181V36.0443H42.319C44.0044 32.6658 44.3386 26.2767 44.3386 21.3355V19.6053H58.3164V36.0443H60.4528V44.4386ZM53.5287 23.3899H48.458V23.9891C48.458 27.4824 48.0928 32.99 46.7562 36.0516H53.5287V23.3899ZM71.2115 40.2114C65.0908 40.2114 61.6196 36.8001 61.6196 29.7626C61.6196 23.6558 64.4061 19.1991 70.2455 19.1991C75.0333 19.1991 78.1356 21.86 78.1356 28.8829V31.4109H66.5753C66.7744 34.7894 68.1092 36.4359 71.6132 36.4359C73.9486 36.4359 76.4502 35.5544 77.9347 34.5399V38.4484C76.5342 39.4137 74.281 40.2114 71.2115 40.2114ZM66.5753 27.8812H73.2639V27.4842C73.2639 24.9562 72.5335 22.9929 70.1597 22.9929C67.8754 22.9728 66.7086 24.6703 66.5753 27.8812ZM86.1589 29.8956V39.8289H81.3548V19.6126H86.1589V28.9303L92.9406 19.6126H97.7795L91.0069 28.9303L98.6961 39.8125H93.2492L86.1589 29.8956ZM98.4204 29.7299C98.4204 23.5721 101.607 19.1973 107.733 19.1973C110.107 19.1973 111.887 19.5962 112.888 20.1608V24.2223C111.92 23.623 110.101 22.9728 108.25 22.9728C105.113 22.9728 103.378 25.2203 103.378 29.6133C103.378 33.7895 104.797 36.4504 108.217 36.4504C110.234 36.4504 111.686 35.935 112.888 35.0863V38.9802C111.719 39.8289 110.149 40.2278 107.932 40.2278C101.523 40.2114 98.4186 36.485 98.4186 29.7299H98.4204Z" fill="#21201F"/>
+                </svg>
+            </div>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="#">Как арендовать самокат</a></li>
+                    <li><a href="#">Катайтесь с Плюсом</a></li>
+                    <li><a href="#">Катайтесь аккуратно</a></li>
+                    <li><a href="#">Где самокаты?</a></li>
+                </ul>
+            </nav>
+            <a class="download__link header__link" href="#">Скачать</a>
+        </div>
+    </header>
+    
+    <section id="main">
+        <div class="container">
+            <div class="main__img-wrapper">
+                <img class="desktop-img" src="./images/main.png" alt="">
+                <img class="mobile-img" src="https://avatars.mds.yandex.net/get-lpc/1531919/e92480aa-01c0-4be9-8b43-5b5f5dfe600d/orig" style="width: calc(100%); display: block; pointer-events: none; margin: 0 auto">
+                <p class="main__title">Скачайте приложение,<br> чтобы арендовать<br> ближайший электросамокат</p>
+            </div>
+            <a class="download__link main__link" href="#">Скачать приложение</a>
+        </div>
+    </section>
+
+    <section id="title" >
+        <div class="container">
+            <div class="title__wrapper">
+                <p class="title__text">Самокаты есть в <span><a class="underline" href="#">Москве</a></span>, <span><a class="underline" href="#">Санкт-Петербурге</a></span>, <span><a class="underline" href="#">Краснодаре</a></span> и <span><a class="underline" href="#">Туле</a></span></p>
+                <img class="title__img" src="https://avatars.mds.yandex.net/get-lpc/1527204/6a47f09b-4e20-4e02-845a-2f2b5cf0a39d/orig">
+                <img src="https://avatars.mds.yandex.net/get-lpc/1520633/d5577264-bc17-4414-9900-cf456ec9a76e/orig">
+            </div>
+        </div>
+    </section>
+
+    <section id="how">
+        <div class="container">
+            <h2 class="block-title">Как арендовать самокат</h2>
+            <div class="how__wrapper">
+                <div class="how__manual">
+                    <div class="how__manual-step">
+                        <img src="https://avatars.mds.yandex.net/get-lpc/403342/f97c3e9b-721d-4a02-b144-2e5a0a368654/orig" style="pointer-events: none; display: block;">
+                        <p class="how__manual-title">В Яндекс Go нажмите кнопку Самокаты</p>
+                    </div>
+                    <div class="how__manual-step">
+                        <img src="https://avatars.mds.yandex.net/get-lpc/1370085/80de62cf-bad2-4b16-ae0a-00f66cf01e80/orig" style="pointer-events: none; display: block;">
+                        <p class="how__manual-title">Найдите на карте ближайшую парковку</p>
+                    </div>
+                    <div class="how__manual-step">
+                        <img src="https://avatars.mds.yandex.net/get-lpc/1370085/c0430b62-e7b0-48b2-9f8e-757dcfaee867/orig" style="pointer-events: none; display: block;">
+                        <p class="how__manual-title">Дойдите до самоката<br> и отсканируйте QR-код<br> на руле</p>
+                    </div>
+                </div>
+                <video loop="" muted="" autoplay="" playsinline="" webkit-playsinline="" preload="auto" class="lc-background__video" style="width: 360px; height: 645px; object-fit: fill; border: none; border-radius: 50px;" pip="false"><source src="https://streaming.video.yandex.ru/get/yndx-video/m-42220-1818a6c5c52-b33674bcc9d381a5/720p.mp4"><source src="https://streaming.video.yandex.ru/get/yndx-video/m-42220-1818a6c5c52-b33674bcc9d381a5/720p.webm" type="video/webm"></video>
+                <img class="how__desk-img" src="https://avatars.mds.yandex.net/get-lpc/1364677/218f6fb2-1e57-4039-8eac-f0122a8e929f/orig" style="display: block; pointer-events: none; position: absolute; bottom: -35px; left: 389px">
+                <img class="how__mob-img" src="https://avatars.mds.yandex.net/get-lpc/1674605/422b7949-eebf-4909-9315-391523cd6e6b/orig" style="pointer-events: none; display: block; position: absolute; bottom: -100px; right: 30px;">
+            </div>
+            <p class="how__title">Готово! Выбирайте тариф<br>и можно ехать</p>
+        </div>
+    </section>
+
+    <section id="packs">
+        <div class="container-wide">
+            <div class="mobile-packs-row">
+
+            
+                <div class="packs__card-a" style="border: 5px solid #21201f;">
+                    <img style="margin-bottom: 0;" src="https://avatars.mds.yandex.net/get-lpc/1370085/9937c5ad-ced3-4757-800d-ec2e8558a48c/orig">
+                    <p class="packs__card-title">Тариф Фикс</p>
+                    <p class="packs__card-subtitle">Подойдет, если знаете точку назначения. Цена поездки фиксированная. Покажем её заранее.</p>
+                </div>
+    
+        
+        
+                <div class="packs__card-a packs__card-b" style="border: 5px solid #21201f; margin-top: 34px; background: none;">
+                    <img src="https://avatars.mds.yandex.net/get-lpc/1220100/7e2be54c-7cf9-4c8a-84a6-d08b5f887764/orig">
+                    <p class="packs__card-title">Тариф Поминутный</p>
+                    <p class="packs__card-subtitle">Для прогулок по городу.<br>Аренда: от 50 рублей + тариф от 6 рублей в минуту.</p>
+                </div>
+        
+        
+            
+                <div class="packs__card-a packs__card-spec" style="border: none;">
+                    <p class="packs__card-title">Опция «Ещё один самокат»</p>
+                    <p class="packs__card-subtitle">Нужна, чтобы забронировать с одного телефона до трёх самокатов одновременно. Да, и такое бывает</p>
+                </div>
+            </div>
+            <div class="packs__wrapper">
+                <div class="packs__row">
+                    <div class="packs__card-a packs__card-desk" style="border: 5px solid #21201f;">
+                        <img src="https://avatars.mds.yandex.net/get-lpc/1370085/9937c5ad-ced3-4757-800d-ec2e8558a48c/orig">
+                        <p class="packs__card-title">Тариф Фикс</p>
+                        <p class="packs__card-subtitle">Подойдет, если знаете точку назначения. Цена поездки фиксированная. Покажем её заранее.</p>
+                    </div>
+                    <div class="packs__card-a packs__card-spec packs__card-desk" style="border: none;">
+                        <p class="packs__card-title">Опция «Ещё один самокат»</p>
+                        <p class="packs__card-subtitle">Нужна, чтобы забронировать с одного телефона до трёх самокатов одновременно. Да, и такое бывает</p>
+                    </div>
+                    <div class="packs__card-a" style="position: relative; border:none;">
+                        <div class="packs__card-a" style="height:auto;position:  absolute; left: 0; top: 0; background-color: #21201f; width: 680px; z-index: 1;">
+                            <p class="packs__card-title" style="color: #fff;">На чём едем?</p>
+                            <p class="packs__card-subtitle" style="color: #fff; width: 436px;">Ninebot Max Plus 2022 года выпуска. Красив и функционален. На его борту есть держатель для телефона с беспроводной зарядкой.</p>
+                            <p class="packs__card-subtitle" style="color: #fff; margin-top: 26px;">За 30 минут поездки зарядим<br> ваш девайс на 40%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="packs__row">
+                    <div class="packs__card-a packs__card-b packs__card-desk" style="border: 5px solid #21201f; margin-top: 93px;">
+                        <img src="https://avatars.mds.yandex.net/get-lpc/1220100/7e2be54c-7cf9-4c8a-84a6-d08b5f887764/orig">
+                        <p class="packs__card-title">Тариф Поминутный</p>
+                        <p class="packs__card-subtitle">Для прогулок по городу.<br>Аренда: от 50 рублей + тариф от 6 рублей в минуту.</p>
+                    </div>
+                    <div class="packs__card-a packs__card-b" style="border:none;background-image: url(https://avatars.mds.yandex.net/get-lpc/1368426/10c1c55d-f843-434c-9caf-57c59dfa7cd5/orig);">
+                        <div class="packs__card-wrapper">
+                            <p class="packs__card-title" >Катайтесь<br> с Плюсом</p>
+                            <img style="width: 85px; height: 103px; margin-bottom: 0;" src="https://avatars.mds.yandex.net/get-lpc/403342/6a21bd3e-a65b-4eb8-bdfe-85fcc8041c15/orig">
+                        </div>
+                        <p class="packs__card-subtitle">Вернем 5% кешбэка баллами Плюса за каждую поездку. Кешбэк можно тратить в сервисах Яндекса</p>
+                    </div>
+                    <div class="packs__card-b packs__img-card">
+                        <img style="border-radius: 56px; border: 5px solid #21201f;" src="https://avatars.mds.yandex.net/get-lpc/1674605/57e4c449-5c91-4cf1-89bf-1643586d68fc/orig">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="plus">
+        <div class="container">
+            <h2 class="plus__title">Абонемент<br> на самокаты<br> в Яндекс<br> Плюсе</h2>
+            <p class="plus__subtitle">Если вы часто ездите по городу на самокатах, выгоднее будет с абонементом. Его можно купить, только если у вас есть Яндекс Плюс. Абонемент бесплатный на первый месяц.<br> Вот какие бонусы он даёт:</p>
+            <img class="plus__img" src="./images/plus.png" alt="plus">
+            
+            <div class="plus__wrapper">
+                <div class="plus__offer">
+                    <p class="plus__offer-title">Бесплатный старт</p>
+                    <p class="plus__offer-subtitle">0₽ в любом тарифе и даже в групповой поездке, вместо 50₽ за каждую поездку</p>
+                </div>
+                <div class="plus__offer">
+                    <p class="plus__offer-title">Бесплатное ожидание</p>
+                    <p class="plus__offer-subtitle">до 15 минут за 0₽ вместо 3,5₽ за минуту</p>
+                </div>
+            </div>
+        </div>
+        <div class="yellow"></div>
+    </section>
+
+    <section id="carusel">
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides">
+              <video controls="" preload="auto" style="width: 100%; border-radius: 32px;" pip="false">
+                <source src="https://streaming.video.yandex.ru/get/yndx-video/m-42220-17a7be0554e-ca9878b3e384ce9b/720p.mp4" type="video/mp4">
+                <source src="https://streaming.video.yandex.ru/get/yndx-video/m-42220-17a7be0554e-ca9878b3e384ce9b/720p.webm" type="video/webm">
+                </video>
+            </div>
+          
+            <div class="mySlides fade">
+                <video controls="" preload="auto" style="width: 100%; border-radius: 32px;" pip="false">
+                    <source src="https://streaming.video.yandex.ru/get/yndx-video/m-67230-17a7be12814-d4349e064a96e559/720p.mp4" type="video/mp4">
+                    <source src="https://streaming.video.yandex.ru/get/yndx-video/m-67230-17a7be12814-d4349e064a96e559/720p.webm" type="video/webm">
+                </video>
+            </div>
+          
+            <div class="mySlides fade">
+                <video controls="" preload="auto" style="width: 100%; border-radius: 32px;" pip="false">
+                    <source src="https://streaming.video.yandex.ru/get/yndx-video/m-28644-17a7be1a0ee-d835336e9d859e4a/720p.mp4" type="video/mp4">
+                    <source src="https://streaming.video.yandex.ru/get/yndx-video/m-28644-17a7be1a0ee-d835336e9d859e4a/720p.webm" type="video/webm">
+                </video>
+            </div>
+
+            <div class="mySlides fade">
+                <video controls="" preload="auto" style="width: 100%; border-radius: 32px;" pip="false">
+                    <source src="https://streaming.video.yandex.ru/get/yndx-video/m-28644-17a7be1a0ee-d835336e9d859e4a/720p.mp4" type="video/mp4">
+                    <source src="https://streaming.video.yandex.ru/get/yndx-video/m-28644-17a7be1a0ee-d835336e9d859e4a/720p.webm" type="video/webm">
+                </video>
+            </div>
+
+            <div class="mySlides fade">
+                <video controls="" preload="auto" style="width: 100%; border-radius: 32px;" pip="false">
+                    <source src="https://streaming.video.yandex.ru/get/yndx-video/m-43474-17a7be21d43-cfb3f6c623bf8b7b/720p.mp4" type="video/mp4">
+                    <source src="https://streaming.video.yandex.ru/get/yndx-video/m-43474-17a7be21d43-cfb3f6c623bf8b7b/720p.webm" type="video/webm">
+                </video>
+            </div>
+
+            <div class="mySlides fade">
+                <video controls="" preload="auto" style="width: 100%; border-radius: 32px;" pip="false">
+                    <source src="https://streaming.video.yandex.ru/get/yndx-video/m-28644-17a85a07b69-ac436aecf5e86a78/720p.mp4" type="video/mp4">
+                    <source src="https://streaming.video.yandex.ru/get/yndx-video/m-28644-17a85a07b69-ac436aecf5e86a78/720p.webm" type="video/webm">
+                </video>
+            </div>
+
+            <div class="mySlides fade">
+                <video controls="" preload="auto" style="width: 100%; border-radius: 32px;" pip="false">
+                    <source src="https://streaming.video.yandex.ru/get/yndx-video/m-42220-17a7be31056-f283c899f4d444f0/720p.mp4" type="video/mp4">
+                    <source src="https://streaming.video.yandex.ru/get/yndx-video/m-42220-17a7be31056-f283c899f4d444f0/720p.webm" type="video/webm">
+                </video>
+            </div>
+
+            <div class="mySlides fade">
+                <video controls="" preload="auto" style="width: 100%; border-radius: 32px;" pip="false">
+                    <source src="https://streaming.video.yandex.ru/get/yndx-video/m-67230-17a7be35fa3-95150f9a730d87/720p.mp4" type="video/mp4">
+                    <source src="https://streaming.video.yandex.ru/get/yndx-video/m-67230-17a7be35fa3-95150f9a730d87/720p.webm" type="video/webm">
+                </video>
+            </div>
+
+            <div class="mySlides fade">
+                <video controls="" preload="auto" style="width: 100%; border-radius: 32px;" pip="false">
+                    <source src="https://streaming.video.yandex.ru/get/yndx-video/m-28644-17a7be3bc45-8adfd7acc40bb5f1/720p.mp4" type="video/mp4">
+                    <source src="https://streaming.video.yandex.ru/get/yndx-video/m-28644-17a7be3bc45-8adfd7acc40bb5f1/720p.webm" type="video/webm">
+                </video>
+            </div>
+
+            <div class="mySlides fade">
+                <video controls="" preload="auto" style="width: 100%; border-radius: 32px;" pip="false">
+                    <source src="https://streaming.video.yandex.ru/get/yndx-video/m-38232-17a7be46e2e-4900b1d2d2696114/720p.mp4" type="video/mp4">
+                    <source src="https://streaming.video.yandex.ru/get/yndx-video/m-38232-17a7be46e2e-4900b1d2d2696114/720p.webm" type="video/webm">
+                </video>
+            </div>
+
+            <div class="mySlides fade">
+                <video controls="" preload="auto" style="width: 100%; border-radius: 32px;" pip="false">
+                    <source src="https://streaming.video.yandex.ru/get/yndx-video/m-42220-17a7be4dec5-264e0ac54d3efdd0/720p.mp4" type="video/mp4">
+                    <source src="https://streaming.video.yandex.ru/get/yndx-video/m-42220-17a7be4dec5-264e0ac54d3efdd0/720p.webm" type="video/webm">
+                </video>
+            </div>
+          
+          </div>
+          <br>
+          
+          <!-- The dots/circles -->
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+          </div>
+    </section>
+
+    <section id="info">
+        <div class="container-wide">
+            <div class="info__block">
+                <h2 class="block-title" style="margin-bottom: 72px;">Катайтесь аккуратно</h2>
+                <div class="info__wrapper">
+                    <div class="info__row">
+                        <div class="info__card">
+                            <img src="https://avatars.mds.yandex.net/get-lpc/1531919/cc3cba2a-db3e-40c9-af79-c97a853fb3e8/orig" style="display: block; pointer-events: none; margin-bottom: 24px;">
+                            <p class="info__card-title">Один человек — один самокат</p>
+                            <p class="info__card-subtitle">А с опцией «Ещё один самокат» можно забронировать самокат для друга</p>
+                        </div>
+                        <div class="info__card">
+                            <img src="https://avatars.mds.yandex.net/get-lpc/1674605/6e94554a-eb70-4959-86ef-51a59ad70fce/orig" style="display: block; pointer-events: none; margin-bottom: 24px;">
+                            <p class="info__card-title">Катайтесь трезвыми</p>
+                            <p class="info__card-subtitle">Это правило справедливо для любого транспорта</p>
+                        </div>
+                        <div class="info__card">
+                            <img src="https://avatars.mds.yandex.net/get-lpc/403342/21e693ff-f2d4-4a98-b124-81ca05ac3b7a/orig" style="display: block; pointer-events: none; margin-bottom: 24px;">
+                            <p class="info__card-title">Уступайте пешеходам</p>
+                            <p class="info__card-subtitle">Вы тоже один из них</p>
+                        </div>
+                    </div>
+                    <div class="info__row">
+                        <div class="info__card">
+                            <img src="https://avatars.mds.yandex.net/get-lpc/1370085/9e926005-d504-417a-b278-b5e04fc5ff47/orig" style="display: block; pointer-events: none; margin-bottom: 24px;">
+                            <p class="info__card-title">Лучше наденьте шлем</p>
+                            <p class="info__card-subtitle">Если только учитесь кататься, не повредит и другая защита</p>
+                        </div>
+                        <div class="info__card">
+                            <img src="https://avatars.mds.yandex.net/get-lpc/1364677/e8ec23bd-f6af-430c-8666-1fcadc57b406/orig" style="display: block; pointer-events: none; margin-bottom: 24px;">
+                            <p class="info__card-title">Переходите дорогу только пешком</p>
+                            <p class="info__card-subtitle">То же с бордюрами и ступеньками</p>
+                        </div>
+                        <div class="info__card">
+                            <img src="https://avatars.mds.yandex.net/get-lpc/1531919/9fe85b23-84ec-45c4-afb2-c9372c32cfde/orig" style="display: block; pointer-events: none; margin-bottom: 24px;">
+                            <p class="info__card-title">Катайтесь по-взрослому</p>
+                            <p class="info__card-subtitle">Вы можете взять самокат, если вам уже исполнилось 18 лет</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="position: relative; width: 100%; height: 465px;">
+                <div class="info__attention">
+                    <img src="https://avatars.mds.yandex.net/get-lpc/1368426/b66b005d-4cd9-4bdc-8737-acb70a4e7801/orig" style="display: block; pointer-events: none; margin-bottom: 24px;">
+                    <p>Во время поездки на самокате действует страхование жизни и здоровья — вашей и окружающих. Если во время катания что-то произошло, сразу же напишите в поддержку</p>
+                </div>
+            </div>
+        </div>
+        <div class="info-mobile__block">
+            <h2 class="block-title">Катайтесь аккуратно</h2>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="info__card">
+                        <img src="https://avatars.mds.yandex.net/get-lpc/1531919/cc3cba2a-db3e-40c9-af79-c97a853fb3e8/orig" style="display: block; pointer-events: none; margin-bottom: 24px;">
+                        <p class="info__card-title">Один человек — один самокат</p>
+                        <p class="info__card-subtitle">А с опцией «Ещё один самокат» можно забронировать самокат для друга</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="info__card">
+                        <img src="https://avatars.mds.yandex.net/get-lpc/1674605/6e94554a-eb70-4959-86ef-51a59ad70fce/orig" style="display: block; pointer-events: none; margin-bottom: 24px;">
+                        <p class="info__card-title">Катайтесь трезвыми</p>
+                        <p class="info__card-subtitle">Это правило справедливо для любого транспорта</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="info__card">
+                        <img src="https://avatars.mds.yandex.net/get-lpc/403342/21e693ff-f2d4-4a98-b124-81ca05ac3b7a/orig" style="display: block; pointer-events: none; margin-bottom: 24px;">
+                        <p class="info__card-title">Уступайте пешеходам</p>
+                        <p class="info__card-subtitle">Вы тоже один из них</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="info__card">
+                        <img src="https://avatars.mds.yandex.net/get-lpc/1370085/9e926005-d504-417a-b278-b5e04fc5ff47/orig" style="display: block; pointer-events: none; margin-bottom: 24px;">
+                        <p class="info__card-title">Лучше наденьте шлем</p>
+                        <p class="info__card-subtitle">Если только учитесь кататься, не повредит и другая защита</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="info__card">
+                        <img src="https://avatars.mds.yandex.net/get-lpc/1364677/e8ec23bd-f6af-430c-8666-1fcadc57b406/orig" style="display: block; pointer-events: none; margin-bottom: 24px;">
+                        <p class="info__card-title">Переходите дорогу только пешком</p>
+                        <p class="info__card-subtitle">То же с бордюрами и ступеньками</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="info__card">
+                        <img src="https://avatars.mds.yandex.net/get-lpc/1531919/9fe85b23-84ec-45c4-afb2-c9372c32cfde/orig" style="display: block; pointer-events: none; margin-bottom: 24px;">
+                        <p class="info__card-title">Катайтесь по-взрослому</p>
+                        <p class="info__card-subtitle">Вы можете взять самокат, если вам уже исполнилось 18 лет</p>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+        </div>
+    </section>
+
+    <section id="map">
+        <div class="container">
+            <h2 class="block-title">Где есть самокаты</h2>
+            <p class="map__subtitle">Самокаты постепенно появляются в разных районах Санкт-Петербурга. Карта в приложении покажет, где взять самокат — и на какой парковке его можно оставить</p>
+            <img src="https://avatars.mds.yandex.net/get-lpc/1520633/bd3093ef-6bb8-4953-8680-2dca3bd1573b/orig" style="display: block; pointer-events: none; width: 100%; border-radius: 56px;">
+        </div>
+    </section>
+
+    <section id="download">
+        <div class="container">
+            <h2 class="block-title">Скачайте<br>приложение</h2>
+            <p class="download__subtitle">Наведите камеру на QR-код для загрузки приложения</p>
+            <img src="https://avatars.mds.yandex.net/get-lpc/1370085/d9f75df2-ba50-4000-83ea-1f6db39c9d15/orig" style="display: block; pointer-events: none; width: 202px; height: auto">
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" style="display: flex; justify-content: space-between;">
+            <p class="footer__subtitle">Электросамокаты Яндекс Go — сервис аренды электросамокатов на условиях, указанных на yandex.ru/legal/samokaty. Дополнительная опция «Абонемент на самокаты» оформляется на условиях документа «Условия подписки на Яндекс Плюс» (yandex.ru/legal/yandex_plus_conditions); есть ограничения, подробнее см. здесь: yandex.ru/legal/yandex_plus_opzii_list. В групповой поездке можно арендовать не более 3 самокатов на одного пользователя. Условия подписки на Яндекс Плюс: yandex.ru/legal/yandex_plus_conditions. Условия программы лояльности «Яндекс Плюс Кешбэк»: yandex.ru/legal/plus_loyalty. Пользователю начисляется 5% кешбэка баллами, но не более 1000 баллов за одну поездку. Для получения и использования баллов требуется активная подписка Яндекс Плюс или иная, ее включающая. Баллы не являются денежными средствами, при использовании баллов предоставляется скидка. 0+</p>
+            <p class="footer__subtitle" style="margin-top: 13px;">©2023 ООО «Яндекс.Микромобильность»</p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

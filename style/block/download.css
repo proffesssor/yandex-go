@@ -1,0 +1,22 @@
+#download{
+    padding-top: 128px;
+    height: 800px;
+    background-color: #fff;
+    background-size: 1106px;
+    background-position: left 50% top 226px;
+    background-repeat: no-repeat;
+    background-image: url("https://avatars.mds.yandex.net/get-lpc/1370085/ee43338c-db8c-44a5-982e-e9372ae4028c/orig");
+}
+
+.download__subtitle{
+    font-size: 32px;
+    line-height: 130%;
+    max-width: 455px;
+    padding: 32px 0 48px;
+}
+
+@media (max-width: 1015px){
+    #download{
+        display: none;
+    }
+}

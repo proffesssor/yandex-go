@@ -1,0 +1,123 @@
+#packs{
+    padding-bottom: 128px;
+}
+
+.packs__wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.packs__card-a{
+    width: 517px;
+    padding: 72px 56px;
+    border-radius: 56px;
+    margin-bottom: 34px;
+}
+
+.packs__card-b{
+    width: 464px;
+    z-index: 9; 
+    position: relative;
+}
+
+.packs__card-title{
+    font-size: 36px;
+    line-height: 107%;
+    color: #21201f;
+    margin-bottom: 32px;
+    font-weight: 900;
+}
+
+.packs__card-subtitle{
+    font-size: 22px;
+    line-height: 120%;
+    color: #21201f;
+    font-weight: 600;
+}
+
+.packs__card-a img{
+    margin-bottom: 32px;
+}
+.packs__card-a:nth-child(2){
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='56' ry='56' stroke='%23000000FF' stroke-width='9' stroke-dasharray='11%2c 22' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+.packs__card-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mobile-packs-row{
+    display: none;
+}
+
+@media (max-width: 1014px){
+    .packs__card-a{
+        width: 345px !important;
+        border: 4px solid #21201f;
+        border-radius: 32px !important;
+        padding: 24px !important;
+        height: 250px;
+    }
+    .packs__card-subtitle{
+        font-size: 18px !important;
+        width: 90% !important;
+    }
+    .packs__card-a img {
+        margin-bottom: 16px;
+    }
+    .packs__card-title{
+        font-size: 26px;
+        margin-bottom: 16px;
+    }
+    .packs__card-spec{
+        border: 4px dashed !important;
+        background: none !important;
+    }
+    .packs__img-card{
+        width: 340px;
+    }
+}
+
+@media (max-width: 768px){
+    .packs__card-desk{
+        display: none;
+    }
+    .packs__wrapper{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .packs__card-a .packs__card-a{
+        top: -30px !important;
+        z-index: 10 !important;
+    }
+    .packs__card-wrapper{
+        flex-direction: column-reverse;
+    }
+    .packs__card-wrapper img{
+        width: 50px !important;
+        height: auto !important;
+    }
+    .packs__card-title br{
+        display: none;
+    }
+
+    .packs__card-title{
+        margin-top: 16px;
+    }
+    .mobile-packs-row{
+        display: block;
+        width: 345px !important;
+        max-width: 100% !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+    .mySlides .packs__card-a{
+        margin-bottom: 0;
+        margin-top: 0 !important;
+    }
+
+    #packs{
+        padding-bottom: 0px;
+    }
+}

@@ -1,0 +1,12 @@
+#map{
+    background: #fff;
+    border-radius: 56px 56px 0 0;
+    padding-top: 128px;    
+}
+
+.map__subtitle{
+    margin: 32px 0 72px;
+    font-size: 32px;
+    line-height: 130%;
+    margin-bottom: 72px;
+}
